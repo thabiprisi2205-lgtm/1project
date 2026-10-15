@@ -4,105 +4,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Digital Portfolio</title>
+    <title>S. J. Thabithal Jayarani | Portfolio</title>
 
     <style>
-        body {
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
             font-family: Arial, sans-serif;
-            background-color: #081426;
-            color: white;
+            background: #f5f7ff;
+            color: #222;
             line-height: 1.6;
         }
 
         header {
-            background-color: #10223a;
-            padding: 20px;
-            text-align: center;
+            background: #172554;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
         }
 
         header h2 {
-            color: #57d7e8;
+            font-size: 22px;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            margin: 8px;
-            display: inline-block;
+            margin-left: 18px;
+            font-weight: bold;
         }
 
         nav a:hover {
-            color: #57d7e8;
+            color: #93c5fd;
         }
 
-        section {
-            padding: 30px 8%;
-        }
-
-        .home {
+        .hero {
+            min-height: 400px;
+            padding: 90px 8%;
+            background: linear-gradient(135deg, #172554, #2563eb);
+            color: white;
             text-align: center;
-            padding-top: 60px;
-            padding-bottom: 60px;
         }
 
-        .home h1 {
-            font-size: 32px;
+        .hero h1 {
+            font-size: clamp(30px, 5vw, 48px);
+            margin-bottom: 15px;
         }
 
-        .highlight {
-            color: #57d7e8;
-        }
-
-        h2 {
-            color: #57d7e8;
-        }
-
-        .card {
-            background-color: #10223a;
-            padding: 20px;
-            margin: 15px 0;
-            border-radius: 10px;
-            border: 1px solid #27415f;
-        }
-
-        .skills span {
-            display: inline-block;
-            background-color: #142b47;
-            padding: 10px;
-            margin: 5px;
-            border-radius: 6px;
+        .hero p {
+            font-size: 18px;
+            margin: 10px auto;
+            max-width: 650px;
         }
 
         .btn {
             display: inline-block;
-            background-color: #57d7e8;
-            color: #081426;
-            padding: 10px 18px;
+            margin-top: 25px;
+            padding: 12px 25px;
+            background: white;
+            color: #172554;
+            border-radius: 8px;
             text-decoration: none;
-            border-radius: 6px;
             font-weight: bold;
-            margin-top: 15px;
+        }
+
+        section {
+            padding: 65px 8%;
+        }
+
+        section h2 {
+            text-align: center;
+            color: #172554;
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+
+        .about {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 22px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px #00000010;
+        }
+
+        .card h3 {
+            color: #1d4ed8;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            margin-bottom: 8px;
+        }
+
+        .skills {
+            background: #e8edff;
+        }
+
+        .skill-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill {
+            background: white;
+            color: #172554;
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+
+        .contact {
+            text-align: center;
+            background: #172554;
+            color: white;
+        }
+
+        .contact h2 {
+            color: white;
         }
 
         .contact a {
-            color: #57d7e8;
-            overflow-wrap: anywhere;
+            color: #bfdbfe;
+            word-break: break-word;
         }
 
         footer {
-            background-color: #10223a;
             text-align: center;
-            padding: 15px;
+            padding: 18px;
+            background: #0f172a;
+            color: white;
         }
 
         @media (max-width: 600px) {
-            .home h1 {
-                font-size: 25px;
+            header {
+                justify-content: center;
+                text-align: center;
+            }
+
+            nav a {
+                margin: 6px;
+                display: inline-block;
+            }
+
+            .hero {
+                padding: 65px 6%;
             }
 
             section {
-                padding: 25px 5%;
+                padding: 45px 6%;
             }
         }
     </style>
@@ -111,137 +182,161 @@
 <body>
 
     <header>
-        <h2>S. J. Thabithal Jaya Rani</h2>
+        <h2>Thabithal J.</h2>
 
         <nav>
-            <a href="#home">Home</a>
             <a href="#about">About</a>
+            <a href="#education">Education</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
-            <a href="#education">Education</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
 
-    <section class="home" id="home">
-        <h1>
-            Hi, I'm <span class="highlight">Thabithal Jaya Rani</span>
-        </h1>
+    <div class="hero">
+        <h1>Hi, I'm S. J. Thabithal Jayarani</h1>
 
-        <h3>Aspiring Software Developer</h3>
+        <p>
+            B.Sc. Computer Science Student at Bishop Heber College
+        </p>
 
-        <p>B.Sc. Computer Science Student</p>
-        <p>Bishop Heber College | 2026–2029</p>
-        <p>Interested in programming and problem solving.</p>
+        <p>
+            Aspiring Software Developer | Problem Solver |
+            Passionate About Technology
+        </p>
 
-        <a href="#projects" class="btn">View My Projects</a>
-    </section>
+        <a class="btn" href="#projects">Explore My Projects</a>
+    </div>
 
     <section id="about">
         <h2>About Me</h2>
 
-        <div class="card">
+        <div class="about">
             <p>
-                I am S. J. Thabithal Jaya Rani, a B.Sc.
-                Computer Science student at Bishop Heber College.
-                I am interested in technology, programming,
-                databases and algorithms.
+                I am a B.Sc. Computer Science student at Bishop Heber College,
+                studying from 2026 to 2029. I completed my schooling at
+                Shree Kalaimagal Matriculation Higher Secondary School.
             </p>
 
             <p>
-                My ambition is to become a software developer
-                in the IT field. I want to improve my technical
-                skills and create useful software applications.
+                I am interested in programming, databases, algorithms,
+                and software development. My goal is to become a software
+                developer in the IT field and build useful applications
+                that solve real-world problems.
             </p>
         </div>
     </section>
 
-    <section id="skills">
+    <section id="education">
+        <h2>Education</h2>
+
+        <div class="cards">
+            <div class="card">
+                <h3>B.Sc. Computer Science</h3>
+                <p><strong>College:</strong> Bishop Heber College</p>
+                <p><strong>Duration:</strong> 2026 – 2029</p>
+                <p><strong>Current Status:</strong> Undergraduate Student</p>
+            </div>
+
+            <div class="card">
+                <h3>Higher Secondary</h3>
+                <p>Shree Kalaimagal Matric Higher Secondary School</p>
+                <p><strong>12th Marks:</strong> 417 / 600</p>
+            </div>
+
+            <div class="card">
+                <h3>Secondary School</h3>
+                <p>Shree Kalaimagal Matric Higher Secondary School</p>
+                <p><strong>10th Marks:</strong> 361 / 500</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
         <h2>My Skills</h2>
 
-        <div class="skills">
-            <span>Problem Solving</span>
-            <span>Programming</span>
-            <span>Communication</span>
-            <span>Teamwork</span>
-            <span>Database Concepts</span>
-            <span>Algorithms</span>
-            <span>Data Structures</span>
+        <div class="skill-list">
+            <span class="skill">Problem Solving</span>
+            <span class="skill">Programming</span>
+            <span class="skill">Communication</span>
+            <span class="skill">Teamwork</span>
+            <span class="skill">Database Management</span>
+            <span class="skill">Algorithms</span>
         </div>
     </section>
 
     <section id="projects">
         <h2>My Projects</h2>
 
-        <div class="card">
-            <h3>1. Supermarket Billing System</h3>
-            <p>
-                A project about calculating product prices
-                and preparing customer bills.
-            </p>
-        </div>
+        <div class="cards">
 
-        <div class="card">
-            <h3>2. Linear and Non-Linear Data Structures</h3>
-            <p>
-                A project about organising and processing
-                data using different data structures.
-            </p>
-        </div>
+            <div class="card">
+                <h3>Supermarket Billing Management System</h3>
+                <p>
+                    A project designed to manage supermarket billing,
+                    calculate customer purchases, and generate bills
+                    efficiently.
+                </p>
+                <p><strong>Area:</strong> Billing and Database Management</p>
+            </div>
 
-        <div class="card">
-            <h3>3. Vector Calculus in Weather Prediction</h3>
-            <p>
-                A project exploring vector calculus concepts
-                and their applications in weather prediction.
-            </p>
-        </div>
-    </section>
+            <div class="card">
+                <h3>Heap Sort</h3>
+                <p>
+                    An implementation of the Heap Sort algorithm
+                    to arrange elements in ascending or descending order
+                    using a heap data structure.
+                </p>
+                <p><strong>Area:</strong> Data Structures and Algorithms</p>
+            </div>
 
-    <section id="education">
-        <h2>My Education</h2>
+            <div class="card">
+                <h3>Vector Calculus in Weather Prediction</h3>
+                <p>
+                    An academic project exploring how vector calculus
+                    concepts can help represent wind direction,
+                    wind velocity, and weather-related changes.
+                </p>
+                <p><strong>Area:</strong> Mathematics and Weather</p>
+            </div>
 
-        <div class="card">
-            <h3>B.Sc. Computer Science</h3>
-            <p>Bishop Heber College</p>
-            <p>2026–2029</p>
-        </div>
-
-        <div class="card">
-            <h3>Higher Secondary Education</h3>
-            <p>Shree Kalaimagal Matric Hr. Sec. School</p>
-            <p>12th Marks: 417 / 600</p>
-        </div>
-
-        <div class="card">
-            <h3>Secondary Education</h3>
-            <p>Shree Kalaimagal Matric Hr. Sec. School</p>
-            <p>10th Marks: 361 / 500</p>
         </div>
     </section>
 
     <section id="contact" class="contact">
         <h2>Contact Me</h2>
 
-        <div class="card">
-            <p>Email:</p>
+        <p>Email:
             <a href="mailto:thabiprisi2205@gmail.com">
                 thabiprisi2205@gmail.com
             </a>
+        </p>
 
-            <p>LinkedIn:</p>
-            <a
-                href="https://www.linkedin.com/in/thabithal-jayarani-s-j-74736b424/"
-                target="_blank">
-                Visit My LinkedIn Profile
+        <p>
+            LinkedIn:
+            <a href="https://www.linkedin.com/in/thabithal-jayarani-s-j-74736b424"
+               target="_blank" rel="noopener noreferrer">
+                View My LinkedIn Profile
             </a>
-        </div>
+        </p>
+
+        <p>
+            Feel free to connect with me for academic projects
+            and opportunities to learn software development.
+        </p>
     </section>
 
     <footer>
-        <p>© 2026 S. J. Thabithal Jaya Rani</p>
-        <p>My Digital Portfolio</p>
+        <p>
+            © <span id="year"></span> S. J. Thabithal Jayarani.
+            Personal Portfolio.
+        </p>
     </footer>
+
+    <script>
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+    </script>
 
 </body>
 </html>
